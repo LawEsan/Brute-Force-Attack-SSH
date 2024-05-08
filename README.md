@@ -1,4 +1,4 @@
-# Brute-Force-SSH
+# Brute Force Attack SSH
 
 ## Introduction
 In this project, I explored vulnerabilities within SSH security, utilising Microsoft Azure infrastructure for practical demonstration. SSH does not typically have a password limit. By setting up an SSH server instance and employing brute force techniques with various password combinations, I showcase how easily servers lacking adequate security measures can be compromised. 
@@ -48,7 +48,7 @@ Requirements:
 - Same Inbound Security Rule, Destination port ranges, Name as windows-vm-nsg
 - Add
 
-!NSG
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53707483902/in/datetaken/" title="NSG"><img src="https://live.staticflickr.com/65535/53707483902_c100daca44_c.jpg" width="800" height="261" alt="NSG"/></a>
 
 ## Disable Windows Firewall and Install SQL Server and Create Vulnerabilities
 - <ins>Turn off Windows Firewall</ins>
@@ -60,7 +60,8 @@ Requirements:
 - Open PowerShell app 
 - Ping the windows-vm IP address to verify there is a connection
 
-!FIREWALL OFF
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708828185/in/datetaken/" title="Firewall Off"><img src="https://live.staticflickr.com/65535/53708828185_5cba475c36_c.jpg" width="800" height="598" alt="Firewall Off"/></a>
+
 !PING VM
 
 ## Install SQL Server 2019 Evaluation exe 64-bit
@@ -73,8 +74,9 @@ Requirements:
 - Enter password: Cyberlab123!
 - FYI: your username will be sa (by default)
 - Click Add Current User (this allows the Windows vm account to authenticate and login to SQL).
-- Install 
-!SQL Server 2019
+- Install
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708725694/in/datetaken/" title="SQL Server 2019"><img src="https://live.staticflickr.com/65535/53708725694_2f012be0c1_c.jpg" width="800" height="637" alt="SQL Server 2019"/></a>
 
 ## Install SSMS (SQL Server Management Studio) 
 - https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms 
@@ -119,7 +121,8 @@ Requirements:
 - The last log should appear as Event ID: 18456 Password did not match
 
 !TEST SSMS
-!Event Viewer
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708828190/in/datetaken/" title="18456 SQL Server logon fail"><img src="https://live.staticflickr.com/65535/53708828190_c0d6b8f76f_c.jpg" width="800" height="496" alt="18456 SQL Server logon fail"/></a>
 
 ## Test ping and logging into linux-vm via SSH
 - <ins>Ping linux-vm</ins>
@@ -135,7 +138,7 @@ Requirements:
 - You can verify you are logged into the linux-vm by using this linux command to check your operating system: uname -a
 - To exit PowerShell type “exit”.
 
-!SSH into Linux
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708828130/in/datetaken/" title="SSH into Linux"><img src="https://live.staticflickr.com/65535/53708828130_6973b7fd2d_c.jpg" width="800" height="765" alt="SSH into Linux"/></a>
 
 ## <ins>Create Attacker VM</ins>
 - Note: This purpose of this VM is to impersonate an attacker using brute force in an attempt to gain access to the Windows and Linux VMs. 
@@ -199,8 +202,9 @@ Requirements:
 - Click Windows Logs > Application (to see SQL logs)
 - Type into search bar EventID: 18456 (this displays SQL Server failed logins)
 
-! 4625 EventID
-!18456 SQL Server logon fail
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708607688/in/datetaken/" title="4625 Event Viewer"><img src="https://live.staticflickr.com/65535/53708607688_06dc5401b3_c.jpg" width="800" height="460" alt="4625 Event Viewer"/></a>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708725729/in/datetaken/" title="Event Viewer"><img src="https://live.staticflickr.com/65535/53708725729_df24baab81_c.jpg" width="800" height="459" alt="Event Viewer"/></a>
 
 ## SSH into the Linux VM to observe the logs
 - From main PC open up PowerShell
@@ -214,8 +218,9 @@ Requirements:
 - “cat auth.log | grep password” - This command is used to filter the logs for the word “password”.
 - “cat auth.log | grep Accepted” - This command is used to filter for Accepted passwords. (Capital ‘A’ must be used in Accepted).
 
-!password invalid Linux logs
-!password Accepted Linux logs
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708725699/in/datetaken/" title="Password Invalid Linux logs"><img src="https://live.staticflickr.com/65535/53708725699_5e4a386e56_c.jpg" width="800" height="519" alt="Password Invalid Linux logs"/></a>
+
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53707483897/in/datetaken/" title="Password Accepted Linux logs"><img src="https://live.staticflickr.com/65535/53707483897_cfa5d7c3b6_c.jpg" width="800" height="315" alt="Password Accepted Linux logs"/></a>
 
 ## Conclusion 
 I demonstrated how to brute force SSH and log cybersecurity incidents in Event Viewer. My objective was to highlight the importance of additional measures to strengthen the security posture of an organisation such as multifactor authentication and the necessity for strong passwords.
