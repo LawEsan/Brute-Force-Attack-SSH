@@ -1,4 +1,4 @@
-# Brute Force Attack SSH
+# Brute Force Attack (SSH)
 
 ## Introduction
 In this project, I explored vulnerabilities within SSH security, utilising Microsoft Azure infrastructure for practical demonstration. SSH does not typically have a password limit. By setting up an SSH server instance and employing brute force techniques with various password combinations, I showcase how easily servers lacking adequate security measures can be compromised. 
