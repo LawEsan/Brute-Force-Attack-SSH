@@ -24,7 +24,8 @@ Requirements:
 - Click box “I can confirm I have an eligible Windows 10/11 license with multi-tenant hosting rights”
 - Networking  → Virtual network Create new
 - Name: Lab-VNet
-- Review + Create  
+- Review + Create
+
 ## Create Linux Virtual Machine running Ubuntu 
 - Virtual machine name: linux-vm
 - Same Region, Resource Group, and VNet as windows-vm
@@ -33,7 +34,7 @@ Requirements:
 - Same Size, Username, Password windows-vm
 - Same Virtual Network as Windows 
 
-!VM CREATE
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53707483867/in/datetaken/" title="VM Create"><img src="https://live.staticflickr.com/65535/53707483867_d04ed1fa8b_c.jpg" width="800" height="204" alt="VM Create"/></a>
 
 ## Configure Network Security Group (Layer 4 Firewall) for both VMs to allow all traffic inbound
 - NOTE: This will allow random people online to send traffic to the VMs
@@ -62,7 +63,7 @@ Requirements:
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708828185/in/datetaken/" title="Firewall Off"><img src="https://live.staticflickr.com/65535/53708828185_5cba475c36_c.jpg" width="800" height="598" alt="Firewall Off"/></a>
 
-!PING VM
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708395776/in/datetaken/" title="Ping windows-vm"><img src="https://live.staticflickr.com/65535/53708395776_e4f88024e2_c.jpg" width="800" height="395" alt="Ping windows-vm"/></a>
 
 ## Install SQL Server 2019 Evaluation exe 64-bit
 - https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2019
@@ -86,7 +87,7 @@ Requirements:
 - Click restart 
 - Log back into windows-vm
 
-!SSMS
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708395756/in/datetaken/" title="SSMS"><img src="https://live.staticflickr.com/65535/53708395756_ae8bfdd7ee_c.jpg" width="800" height="693" alt="SSMS"/></a>
 
 ## Enable logging for SQL Server to be ported into Windows Event Viewer
 - Google “Write SQL Server Audit events to the Security log”
@@ -120,7 +121,7 @@ Requirements:
 - Open Event Viewer app → Application 
 - The last log should appear as Event ID: 18456 Password did not match
 
-!TEST SSMS
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708607633/in/datetaken/" title="TEST SSMS"><img src="https://live.staticflickr.com/65535/53708607633_175efc8bc3_c.jpg" width="800" height="497" alt="TEST SSMS"/></a>
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53708828190/in/datetaken/" title="18456 SQL Server logon fail"><img src="https://live.staticflickr.com/65535/53708828190_c0d6b8f76f_c.jpg" width="800" height="496" alt="18456 SQL Server logon fail"/></a>
 
