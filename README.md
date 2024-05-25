@@ -226,4 +226,4 @@ Requirements:
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/200533061@N05/53707483897/in/datetaken/" title="Password Accepted Linux logs"><img src="https://live.staticflickr.com/65535/53707483897_cfa5d7c3b6_c.jpg" width="800" height="315" alt="Password Accepted Linux logs"/></a>
 
 ## Conclusion 
-I demonstrated how to brute force SSH and log cybersecurity incidents in Event Viewer. My objective was to highlight the importance of additional measures to strengthen the security posture of an organisation such as multifactor authentication and the necessity for strong passwords.
+I demonstrated how to brute force SSH and log cybersecurity incidents in Event Viewer. My objective was to highlight the importance of additional measures to strengthen the security posture of an organisation such as multi-factor authentication and the necessity for strong passwords.
